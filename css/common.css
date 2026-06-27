@@ -1,0 +1,70 @@
+/* подключение шрифтов */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  src:
+  url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+  url("../fonts/OpenSans-Regular.woff") format("woff"),
+  url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  src:
+  url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+  url("../fonts/OpenSans-Bold.woff") format("woff"),
+  url("../fonts/OpenSans-Bold.ttf") format("truetype");
+}
+
+/* удаление встроенных стилей */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* общие стили */
+.visually_hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+img {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+img:after {
+  content: "\2639" " " attr(alt);
+  font-size: 16px;
+  font-family: FontAwesome;
+  color: rgb(100, 100, 100);
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
